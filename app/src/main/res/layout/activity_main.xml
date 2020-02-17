@@ -54,28 +54,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonIncrement" />
 
-    <Button
-        android:id="@+id/buttonDoesNotSave"
+    <TextView
+        android:id="@+id/doesNotSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Initial"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.284"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="180dp"
+        android:text="Does Not Save"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintTop_toBottomOf="@+id/mCounterTextView" />
 
-    <Button
-        android:id="@+id/buttonDoesSave"
+    <TextView
+        android:id="@+id/doesSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:text="Initial"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonDoesNotSave"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428" />
+        android:layout_marginTop="52dp"
+        android:text="Does Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clear" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

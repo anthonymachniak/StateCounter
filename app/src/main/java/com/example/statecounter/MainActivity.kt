@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
     private var increment: Button?= null
     private var savePreferences: Button?= null
     private var clearPreference: Button?= null
-    private var buttonDoesNotSave: Button?= null
-    private var buttonDoesSave: Button?= null
+    private var txtDoesNotSave: TextView?= null
+    private var txtDoesSave: TextView?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,16 +32,16 @@ class MainActivity : AppCompatActivity() {
         increment = findViewById(R.id.buttonIncrement)
         savePreferences = findViewById(R.id.save)
         clearPreference = findViewById(R.id.clear)
-        buttonDoesNotSave = findViewById(R.id.buttonDoesNotSave)
-        buttonDoesSave = findViewById(R.id.buttonDoesSave)
+        txtDoesNotSave = findViewById(R.id.doesNotSave)
+        txtDoesSave = findViewById(R.id.doesSave)
 
         increment?.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View) {
                 mCounter += 1
                 mCounterTextView?.text = mCounter.toString()
 
-                buttonDoesNotSave?.text = mCounter.toString()
-                buttonDoesSave?.text = mCounter.toString()
+                txtDoesNotSave?.text = mCounter.toString()
+                txtDoesSave?.text = mCounter.toString()
             }
         })
 
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         super.onRestoreInstanceState(savedInstanceState)
         if (savedInstanceState != null) {
             mCounter = savedInstanceState.getInt(STATE_COUNTER)
-            buttonDoesSave?.text = mCounter.toString()
+            txtDoesSave?.text = mCounter.toString()
         }
     }
 
